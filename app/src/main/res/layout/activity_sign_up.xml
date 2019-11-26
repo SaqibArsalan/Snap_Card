@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="150dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_businesswoman" />
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        android:textSize="25sp"
+        />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/email_address"
+        android:textSize="25sp"
+        />
+
+
+</RelativeLayout>
