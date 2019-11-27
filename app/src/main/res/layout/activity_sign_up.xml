@@ -93,10 +93,11 @@
         android:inputType="phone"
         android:textSize="12sp"
         />
+
     <RadioGroup
         android:id="@+id/radioSex"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/radioMale"
@@ -106,28 +107,34 @@
             android:layout_marginTop="540dp"
             android:layout_marginBottom="200dp"
             android:checked="false"
+            android:onClick="male_profile"
             android:text="@string/male"
             android:textSize="15dp" />
-
-    </RadioGroup>
-    <RadioGroup
-        android:id="@+id/radioSex1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
 
         <RadioButton
             android:id="@+id/radioFemale"
             android:layout_width="300dp"
             android:layout_height="30dp"
             android:layout_marginLeft="225dp"
-            android:layout_marginTop="540dp"
+            android:layout_marginTop="-230dp"
             android:layout_marginBottom="200dp"
             android:checked="false"
+            android:onClick="women_profile"
             android:text="@string/female"
             android:textSize="15dp" />
 
     </RadioGroup>
 
+
+    <TextView
+        android:id="@+id/change_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="130dp"
+        android:text="@string/change_profile_photo"
+
+        />
 
     <Button
         android:id="@+id/register"
@@ -140,6 +147,7 @@
         android:text="@string/sign_up"
         android:textSize="12sp"
         />
+
 
 
 

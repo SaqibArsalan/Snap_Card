@@ -31,6 +31,10 @@ public class meeting_calender extends AppCompatActivity {
     TextView txtDateYear;
     GridView gridView;
 
+    public meeting_calender() {
+
+    }
+
     public meeting_calender(Context context, AttributeSet attrs) {
         initControl(context, attrs);
     }

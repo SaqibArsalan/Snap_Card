@@ -13,15 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".meeting_calender"></activity>
-        <activity android:name=".SignIn" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".addMeeting"
+            android:label="ADD MEETING" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".meeting_calender"/>
+        <activity android:name=".SignIn" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 

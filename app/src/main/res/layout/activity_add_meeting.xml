@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addMeeting">
+
+    <EditText
+        android:id="@+id/contactName"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/select_contact_name"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        />
+
+    <EditText
+        android:id="@+id/meetingDate"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/select_meeting_date"
+        android:textSize="12sp"
+        />
+    <EditText
+        android:id="@+id/meetingTime"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="175dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/select_meeting_timings"
+        android:textSize="12sp"
+        />
+    <EditText
+        android:id="@+id/meetingTitle"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/select_meeting_title"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/setReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginBottom="-200dp"
+        android:text="Send Reminder"
+        />
+
+    <CheckBox
+        android:id="@+id/CheckBoxEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="65dp"
+        android:onClick="checkForEmail"
+        />
+
+    <CheckBox
+        android:id="@+id/CheckboxContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="375dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="65dp"
+        android:onClick="checkForContact"
+        />
+
+    <TextView
+        android:id="@+id/sendReminderEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="345dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="100dp"
+        android:text="@string/as_email_on"
+        />
+    <TextView
+        android:id="@+id/sendReminderContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="100dp"
+        android:text="@string/as_text_message_on"
+        />
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="65dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="@string/reminder_tag"
+
+        />
+    <Button
+        android:id="@+id/workTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:text="@string/add"
+        android:textSize="12sp"
+        />
+    <Button
+        android:id="@+id/studyTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:text="@string/study"
+        android:textSize="12sp"
+        />
+    <Button
+        android:id="@+id/healthTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:text="@string/health"
+        android:textSize="12sp"
+        />
+
+    <Button
+        android:id="@+id/leisureTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/ic_round_textview"
+        android:text="@string/leisure"
+        android:textSize="12sp"
+        />
+
+
+
+    <Button
+        android:id="@+id/addMeeting"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/ic_round_button"
+        android:text="@string/add"
+        android:textSize="12sp"
+        />
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
