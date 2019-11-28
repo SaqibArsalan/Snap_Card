@@ -22,7 +22,7 @@
         android:textSize="12sp"
         />
 
-    <EditText
+    <TextView
         android:id="@+id/meetingDate"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -35,7 +35,17 @@
         android:hint="@string/select_meeting_date"
         android:textSize="12sp"
         />
-    <EditText
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/calenderDate"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/ic_calender" />
+
+    <TextView
         android:id="@+id/meetingTime"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -49,6 +59,14 @@
         android:hint="@string/select_meeting_timings"
         android:textSize="12sp"
         />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/calenderTime"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/ic_time" />
     <EditText
         android:id="@+id/meetingTitle"
         android:layout_width="300dp"
@@ -184,6 +202,7 @@
         android:layout_marginBottom="250dp"
         android:background="@drawable/ic_round_button"
         android:text="@string/add"
+        android:onClick="GoToHomePage"
         android:textSize="12sp"
         />
 

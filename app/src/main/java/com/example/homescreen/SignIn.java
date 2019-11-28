@@ -56,6 +56,7 @@ public class SignIn extends AppCompatActivity {
 
         if(TextUtils.isEmpty(password)) {
             Toast.makeText(getApplicationContext(),"Please enter password",Toast.LENGTH_LONG).show();
+            return;
 
         }
         mAuth.signInWithEmailAndPassword(email,password)
