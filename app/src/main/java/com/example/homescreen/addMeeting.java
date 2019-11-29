@@ -22,6 +22,9 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,14 +33,34 @@ import java.util.Date;
 import java.util.Locale;
 
 public class addMeeting extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+    private TextView meeting_date,meeting_time;
+    private EditText nameOfContact,meeting_title;
+    private Button addContact;
+
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_meeting);
 
-        TextView textView = (TextView) findViewById(R.id.meetingDate);
-        textView.setOnClickListener(new View.OnClickListener() {
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Meeting");
+
+        nameOfContact = (EditText) findViewById(R.id.contactName);
+        meeting_title = (EditText) findViewById(R.id.meetingTitle);
+        addContact = (Button) findViewById(R.id.addMeeting);
+
+        addContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                storeMeeting();
+
+            }
+        });
+
+         meeting_date = (TextView) findViewById(R.id.meetingDate);
+        meeting_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment datePicker = new DatePickerFragment();
@@ -45,14 +68,62 @@ public class addMeeting extends AppCompatActivity implements DatePickerDialog.On
             }
         });
 
-        TextView meetingTime = (TextView) findViewById(R.id.meetingTime);
-        meetingTime.setOnClickListener(new View.OnClickListener() {
+         meeting_time = (TextView) findViewById(R.id.meetingTime);
+        meeting_time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment timePicker = new TimePickerFragment();
                 timePicker.show(getSupportFragmentManager(),"time picker");
             }
         });
+
+
+    }
+    public void storeMeeting() {
+
+        String contact_name = nameOfContact.getText().toString();
+        String date_meeting = meeting_date.getText().toString();
+        String time_meeting = meeting_time.getText().toString();
+        String title_meeting = meeting_title.getText().toString();
+
+
+        if(TextUtils.isEmpty(contact_name)){
+            Toast.makeText(addMeeting.this,"Please enter the Name",Toast.LENGTH_LONG).show();
+
+        }
+        else {
+
+        }
+
+
+        if(TextUtils.isEmpty(date_meeting)){
+            Toast.makeText(addMeeting.this,"Please provide the date",Toast.LENGTH_LONG).show();
+
+        }
+        else {
+
+        }
+
+
+        if(TextUtils.isEmpty(time_meeting)){
+            Toast.makeText(addMeeting.this,"Please provide the Time",Toast.LENGTH_LONG).show();
+
+        }
+        else {
+
+        }
+
+
+        if(TextUtils.isEmpty(title_meeting)){
+            Toast.makeText(addMeeting.this,"Please enter the title",Toast.LENGTH_LONG).show();
+
+        }
+        else {
+
+        }
+
+
+
 
 
     }
