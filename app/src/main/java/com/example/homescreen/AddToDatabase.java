@@ -6,6 +6,12 @@ public class AddToDatabase {
     private String meetingTime;
     private String meetingTitle;
 
+    public String getMeetingId() {
+        return meetingId;
+    }
+
+    private String meetingId;
+
     public AddToDatabase() {
 
     }
@@ -26,8 +32,9 @@ public class AddToDatabase {
         return meetingTitle;
     }
 
-    public AddToDatabase(String contactName, String meetingDate, String meetingTime, String meetingTitle) {
+    public AddToDatabase(String meetingId,String contactName, String meetingDate, String meetingTime, String meetingTitle) {
 
+        this.meetingId = meetingId;
         this.contactName = contactName;
         this.meetingDate = meetingDate;
         this.meetingTime = meetingTime;

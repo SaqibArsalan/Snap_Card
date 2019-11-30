@@ -87,40 +87,53 @@ public class addMeeting extends AppCompatActivity implements DatePickerDialog.On
         String title_meeting = meeting_title.getText().toString();
 
 
-        if(TextUtils.isEmpty(contact_name)){
+        if(TextUtils.isEmpty(contact_name) && TextUtils.isEmpty(date_meeting) && TextUtils.isEmpty(time_meeting) && TextUtils.isEmpty(title_meeting)) {
             Toast.makeText(addMeeting.this,"Please enter the Name",Toast.LENGTH_LONG).show();
 
-        }
-        else {
-
-        }
-
-
-        if(TextUtils.isEmpty(date_meeting)){
-            Toast.makeText(addMeeting.this,"Please provide the date",Toast.LENGTH_LONG).show();
 
         }
         else {
 
+            String id = databaseReference.push().getKey();
+
+            AddToDatabase data = new AddToDatabase(id,contact_name,date_meeting,time_meeting,title_meeting);
+
+            databaseReference.child(id).setValue(data);
+
+            nameOfContact.setText("");
+            meeting_date.setText("");
+            meeting_time.setText("");
+            meeting_title.setText("");
+
+
         }
 
-
-        if(TextUtils.isEmpty(time_meeting)){
-            Toast.makeText(addMeeting.this,"Please provide the Time",Toast.LENGTH_LONG).show();
-
-        }
-        else {
-
-        }
-
-
-        if(TextUtils.isEmpty(title_meeting)){
-            Toast.makeText(addMeeting.this,"Please enter the title",Toast.LENGTH_LONG).show();
-
-        }
-        else {
-
-        }
+//
+//        if(TextUtils.isEmpty(date_meeting)){
+//            Toast.makeText(addMeeting.this,"Please provide the date",Toast.LENGTH_LONG).show();
+//
+//        }
+//        else {
+//
+//        }
+//
+//
+//        if(TextUtils.isEmpty(time_meeting)){
+//            Toast.makeText(addMeeting.this,"Please provide the Time",Toast.LENGTH_LONG).show();
+//
+//        }
+//        else {
+//
+//        }
+//
+//
+//        if(TextUtils.isEmpty(title_meeting)){
+//            Toast.makeText(addMeeting.this,"Please enter the title",Toast.LENGTH_LONG).show();
+//
+//        }
+//        else {
+//
+//        }
 
 
 
